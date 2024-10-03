@@ -38,12 +38,12 @@ document.addEventListener("DOMContentLoaded", function() {
 // Logo sosmed pada detaii Produk
 document.addEventListener("DOMContentLoaded", function() {
     const logos = [
-      {image: "../asset/blibli.png"},
-      {image: "../asset/bukalapak.png"},
-      {image: "../asset/lazada.png"},
-      {image: "../asset/shopee.png"},
-      {image: "../asset/tiktok.png"},
-      {image: "../asset/tokopedia.png"},
+      {image: "../../asset/blibli.png"},
+      {image: "../../asset/bukalapak.png"},
+      {image: "../../asset/lazada.png"},
+      {image: "../../asset/shopee.png"},
+      {image: "../../asset/tiktok.png"},
+      {image: "../../asset/tokopedia.png"},
     ];
 
     const logoContainer = document.querySelector(".logo-sosmed");
@@ -56,12 +56,35 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   })
 
+// Hamburger btn
+const hamBtn = document.querySelector(".hamburger");
+const menus = document.querySelector(".menu");
+
+hamBtn.addEventListener("click", function() {
+    hamBtn.classList.toggle("is-active");
+    menus.classList.toggle("menu-active")
+})
+
   // CTA
 const toTop = document.getElementById("btt");
 document.addEventListener("scroll", function() {
     if (window.scrollY > 50) {
         toTop.classList.add("active");
+        if (menus.classList.contains("menu-active")) {
+            hamBtn.classList.remove("is-active");
+            menus.classList.remove("menu-active");
+        }
     } else {
         toTop.classList.remove("active");
+    }
+})
+
+// Detail ham scroll
+document.addEventListener("scroll", function() {
+    if (window.scrollY > 50) {
+      if (menus.classList.contains("menu-active")) {
+        hamBtn.classList.remove("is-active");
+        menus.classList.remove("menu-active");
+      }
     }
 })

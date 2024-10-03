@@ -251,11 +251,24 @@ document.addEventListener("DOMContentLoaded", function () {
   })
 });
 
+// Hamburger btn
+const hamBtn = document.querySelector(".hamburger");
+const menus = document.querySelector(".menu");
+
+hamBtn.addEventListener("click", function() {
+  hamBtn.classList.toggle("is-active");
+  menus.classList.toggle("menu-active");
+})
+
 // CTA
 const topCareer = document.getElementById("top-Career");
 document.addEventListener("scroll", function() {
   if (window.scrollY > 50) {
     topCareer.classList.add("active");
+    if (menus.classList.contains("menu-active")) {
+      hamBtn.classList.remove("is-active");
+      menus.classList.remove("menu-active");
+    }
   } else {
     topCareer.classList.remove("active");
   }

@@ -1,3 +1,4 @@
+  
   document.addEventListener("DOMContentLoaded", function() {
     const logos = [
       {image: "../asset/Logo1.png"},
@@ -42,11 +43,24 @@
     });
   })
 
+// Hamburger btn
+const hamBtn = document.querySelector(".hamburger");
+const menus = document.querySelector(".menu");
+
+hamBtn.addEventListener("click", function() {
+  hamBtn.classList.toggle("is-active");
+  menus.classList.toggle("menu-active")
+})
+
 // CTA Index
 const up = document.getElementById("cta");
 document.addEventListener("scroll", function() {
   if(window.scrollY > 50) {
     up.classList.add("active");
+    if(menus.classList.contains("menu-active")) {
+      hamBtn.classList.remove("is-active");
+      menus.classList.remove("menu-active");
+    }
   } else {
     up.classList.remove("active");
   }
@@ -59,6 +73,16 @@ document.addEventListener("scroll", function() {
     partner.classList.add("active");
   } else {
     partner.classList.remove("active");
+  }
+})
+
+// Ham
+document.addEventListener("scroll", function() {
+  if (window.scrollY > 50) {
+    if (menus.classList.contains("menu-active")) {
+      hamBtn.classList.remove("is-active");
+      menus.classList.remove("menu-active");
+    }
   }
 })
   
