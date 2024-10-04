@@ -608,8 +608,40 @@ video {
   right: 1.25rem;
 }
 
+.top-\[90px\] {
+  top: 90px;
+}
+
 .top-\[92px\] {
   top: 92px;
+}
+
+.top-\[88px\] {
+  top: 88px;
+}
+
+.top-20 {
+  top: 5rem;
+}
+
+.top-16 {
+  top: 4rem;
+}
+
+.top-\[76px\] {
+  top: 76px;
+}
+
+.top-\[78px\] {
+  top: 78px;
+}
+
+.top-\[77px\] {
+  top: 77px;
+}
+
+.top-\[75px\] {
+  top: 75px;
 }
 
 .z-10 {

@@ -28,3 +28,12 @@ hamBtn.addEventListener("click", function() {
     hamBtn.classList.toggle("is-active");
     menus.classList.toggle("menu-active")
 })
+
+document.addEventListener("scroll", function() {
+  if(window.scrollY > 50) {
+    if (menus.classList.contains("menu-active")) {
+      hamBtn.classList.remove("is-active");
+      menus.classList.remove("menu-active");
+    }
+  }
+})
