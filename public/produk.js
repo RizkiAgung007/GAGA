@@ -17,14 +17,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     products.forEach((item) => {
         const list = document.createElement("li");
-        list.className = "border-b rounded-lg sm:pb-6 pb-3 border-blue";
+        list.className = "border-b rounded-lg sm:pb-6 pb-3 md:pt-8 pt-0 border-blue";
 
         list.innerHTML = `
         <div class="flex sm:justify-between justify-center sm:items-center sm:gap-6 gap-4">
             <img src="${item.image}" alt="" class=" sm:w-[35%] w-[30%] h-[50%] sm:pt-0 pt-12">
             <div class="">
                 <div class="flex flex-col w-full">
-                    <h1 class="sm:text-3xl text-xl text-blue font-bold md:pt-0 pt-3">${item.title}</h1>
+                    <h1 class="sm:text-3xl text-xl text-blue font-bold md:pt-0 pt-2">${item.title}</h1>
                     <p class="sm:text-xl text-sm py-4 text-blue">${item.desc}</p>
                 </div>
                 <a href=${item.id}><button class="bg-blue hover:bg-white sm:mt-4 mt-0 sm:px-4 sm:py-3 px-2 py-2 rounded-lg text-white hover:text-blue transition-all border border-blue font-medium">Learn More</button></a>
@@ -35,26 +35,26 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 });
 
-// Logo sosmed pada detaii Produk
+// Logo sosmed pada produk
 document.addEventListener("DOMContentLoaded", function() {
-    const logos = [
-      {image: "../../asset/blibli.png"},
-      {image: "../../asset/bukalapak.png"},
-      {image: "../../asset/lazada.png"},
-      {image: "../../asset/shopee.png"},
-      {image: "../../asset/tiktok.png"},
-      {image: "../../asset/tokopedia.png"},
+    const logo = [
+        {image: "../asset/blibli.png"},
+        {image: "../asset/bukalapak.png"},
+        {image: "../asset/lazada.png"},
+        {image: "../asset/shopee.png"},
+        {image: "../asset/tiktok.png"},
+        {image: "../asset/tokopedia.png"},
     ];
 
-    const logoContainer = document.querySelector(".logo-sosmed");
+    const logoContain = document.querySelector(".logo-sosmed");
 
-    logos.forEach((index) => {
-      const img = document.createElement("img");
-      img.src = index.image;
-      img.className = "xl:w-24 xl:h-24 md:w-16 md:h-16 w-10 h-10";
-      logoContainer.appendChild(img);
-    });
-  })
+    logo.forEach((item) => {
+        const img = document.createElement("img");
+        img.src = item.image;
+        img.className = "xl:w-24 xl:h-24 md:w-16 md:h-16 w-10 h-10";
+        logoContain.appendChild(img);
+    })
+})
 
 // Hamburger btn
 const hamBtn = document.querySelector(".hamburger");

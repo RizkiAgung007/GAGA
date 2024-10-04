@@ -18,7 +18,7 @@
     logos.forEach((item) => {
       const img = this.createElement("img");
       img.src = item.image;
-      img.className = "w-24 h-24 hover:shadow-lg hover:rounded-lg duration-300 transition-all"
+      img.className = "lg:w-24 lg:h-24 sm:w-14 sm:h-14 w-7 h-7 hover:shadow-lg hover:rounded-lg duration-300 transition-all"
       logoContainer.appendChild(img);
     })
   });
